@@ -27,7 +27,7 @@ describe('templates', function(){
         });
 
         it('should have expected properties', function(done){
-          User.attributes.should.have.property('auth');
+          User.attributes.should.have.property('auths');
           done();
         });
       });

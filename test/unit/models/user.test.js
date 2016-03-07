@@ -8,7 +8,7 @@ describe('User',function(){
   var User = require('../../../lib/models/user');
   describe('#attributes()', function(){
     var attributes = User.attributes;
-   
+
     it('should be a function', function(done){
       attributes.should.be.type('function');
       done();
@@ -34,9 +34,9 @@ describe('User',function(){
           done();
         });
       });
-      describe('.auth', function(){
+      describe('.auths', function(){
         it('should exist', function(done){
-          user.should.have.property('auth');
+          user.should.have.property('auths');
           done();
         });
       });

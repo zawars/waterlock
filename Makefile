@@ -9,7 +9,7 @@ TESTAPP = _testapp
 ifeq (true,$(COVERAGE))
 test: jshint coverage
 else
-test: jshint provision base clean
+test: clean jshint provision base 
 endif
 
 base:
@@ -20,7 +20,7 @@ base:
 	--colors \
     --reporter $(REPORTER) \
     --recursive \
-	
+
 coveralls:
 	@echo "+------------------------------------+"
 	@echo "| Running mocha tests with coveralls |"
@@ -45,7 +45,7 @@ provision:
 	$(WATERLOCK) generate all
 
 localauth:
-	npm install git@github.com:waterlock/waterlock-local-auth.git 
+	npm install git@github.com:waterlock/waterlock-local-auth.git
 
 jshint:
 	@echo "+------------------------------------+"
